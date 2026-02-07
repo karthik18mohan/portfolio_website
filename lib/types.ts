@@ -40,6 +40,7 @@ export interface Certification {
   title: string;
   issuer: string;
   year: string;
+  image?: string;
 }
 
 export interface Achievement {

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Sidebar from '@/components/layout/Sidebar';
-import MobileNav from '@/components/layout/MobileNav';
 
 export const metadata: Metadata = {
   title: 'Karthik Mohan | Data Scientist & AI Engineer',
@@ -27,8 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <Sidebar />
-        <MobileNav />
-        <main className="lg:ml-56">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

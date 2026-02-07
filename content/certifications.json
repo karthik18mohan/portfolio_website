@@ -2,16 +2,19 @@
   {
     "title": "Oracle Cloud Infrastructure 2024 \u2013 Generative AI Certified Professional",
     "issuer": "Oracle",
-    "year": "2024"
+    "year": "2024",
+    "image": "/assets/certifications/oracle-genai.jpg"
   },
   {
     "title": "Azure Databricks & Apache Spark for Data Engineers",
     "issuer": "Udemy",
-    "year": "2024"
+    "year": "2024",
+    "image": "/assets/certifications/azure-databricks.jpg"
   },
   {
     "title": "Master Machine Learning for Data Science & AI",
     "issuer": "Codebasics",
-    "year": "2023"
+    "year": "2023",
+    "image": "/assets/certifications/ml-codebasics.jpg"
   }
 ]

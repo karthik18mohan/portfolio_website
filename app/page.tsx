@@ -10,7 +10,7 @@ import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <div>
+    <div className="snap-container">
       <HeroSection />
       <AboutSection />
       <ExperienceSection />

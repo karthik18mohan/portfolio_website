@@ -22,8 +22,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ scrollSnapAlign: 'start' }}
+      className="snap-section relative flex items-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image

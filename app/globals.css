@@ -37,6 +37,18 @@ body {
   color: #f1f5f9;
 }
 
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
 @layer utilities {
   .line-clamp-2 {
     display: -webkit-box;
