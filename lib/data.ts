@@ -10,13 +10,14 @@ import imagesManifest from '@/content/images-manifest.json';
 
 export const profile = profileData as Profile;
 export const experiences = experienceData as Experience[];
-export const certifications = certificationsData as Certification[];
 export const achievements = achievementsData as Achievement[];
 export const education = educationData as Education[];
 
-const projectsWithImages: Project[] = (projectsData as Project[]).map(project => {
-  const imageData = imagesManifest[String(project.id) as keyof typeof imagesManifest];
+const projectImages = imagesManifest.projects as Record<string, { thumbnail: string; screenshots: string[] }>;
+const certificationImages = imagesManifest.certifications as Record<string, string>;
 
+export const projects: Project[] = (projectsData as Project[]).map(project => {
+  const imageData = projectImages[String(project.id)];
   return {
     ...project,
     thumbnail: imageData?.thumbnail || '/assets/projects/placeholder.jpg',
@@ -24,7 +25,10 @@ const projectsWithImages: Project[] = (projectsData as Project[]).map(project =>
   };
 });
 
-export const projects = projectsWithImages;
+export const certifications: Certification[] = (certificationsData as Omit<Certification, 'image'>[]).map((cert, index) => ({
+  ...cert,
+  image: certificationImages[String(index + 1)] || undefined,
+}));
 
 export function getProjectById(id: number): Project | undefined {
   return projects.find((p) => p.id === id);
