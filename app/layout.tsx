@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Sidebar from '@/components/layout/Sidebar';
+import BackgroundDecor from '@/components/ui/BackgroundDecor';
 
 export const metadata: Metadata = {
   title: 'Karthik Mohan | Data Scientist & AI Engineer',
@@ -24,9 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased relative">
+        <BackgroundDecor />
         <Sidebar />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   );
