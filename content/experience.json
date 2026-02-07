@@ -1,0 +1,15 @@
+[
+  {
+    "company": "Mercedes-Benz R&D India",
+    "role": "Data Scientist / AI Engineer",
+    "location": "Bangalore, India",
+    "startDate": "Aug 2023",
+    "endDate": "Present",
+    "bullets": [
+      "Engineered an ML-based brake pad wear prediction model using telemetry and test-bench data, applying feature engineering and real-vehicle validation to achieve ~90% accuracy and reduce maintenance downtime by 25%.",
+      "Designed a temperature-weighted damage KPI reliability model by evaluating fatigue and mathematical techniques, improving axle joint assessment accuracy and cutting low-temperature validation testing by 33%.",
+      "Productized a time-series virtual sensor for maneuver detection by developing iterative detection logic and deploying a standalone EXE across departments, achieving >95% accuracy and significantly reducing manual validation effort.",
+      "Implemented a four-point Rainflow fatigue analytics pipeline to translate real-world vehicle load data into deployable damage metrics, enabling supplier-ready ECU feasibility for large-scale customer vehicle durability monitoring."
+    ]
+  }
+]
