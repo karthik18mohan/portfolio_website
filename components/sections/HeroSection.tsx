@@ -22,7 +22,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="snap-section relative flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -49,11 +49,11 @@ export default function HeroSection() {
               {profile.tagline}
             </motion.p>
 
-            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display text-text-primary leading-tight">
+            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display text-text-primary leading-[1.1] tracking-tight">
               {profile.name}
             </motion.h1>
 
-            <motion.p variants={item} className="mt-4 text-xl sm:text-2xl text-text-secondary font-light">
+            <motion.p variants={item} className="mt-4 text-xl sm:text-2xl lg:text-[1.75rem] text-text-secondary font-light tracking-tight">
               {profile.title}
             </motion.p>
 

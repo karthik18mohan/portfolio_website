@@ -13,7 +13,7 @@ export default function SectionWrapper({ id, children, className = '' }: Section
   return (
     <section
       id={id}
-      className={`snap-section flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-y-auto ${className}`}
+      className={`py-16 sm:py-20 px-4 sm:px-6 lg:px-8 ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

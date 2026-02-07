@@ -49,7 +49,7 @@ export default function ProjectsSection() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold font-display text-text-primary group-hover:text-accent transition-colors">
+                  <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary group-hover:text-accent transition-colors tracking-tight">
                     {project.title}
                   </h3>
 

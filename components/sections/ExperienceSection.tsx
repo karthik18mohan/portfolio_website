@@ -26,7 +26,7 @@ export default function ExperienceSection() {
             <div className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-lg font-semibold font-display text-text-primary">{exp.role}</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary tracking-tight">{exp.role}</h3>
                   <p className="text-accent text-sm font-medium">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-text-muted">
@@ -48,8 +48,8 @@ export default function ExperienceSection() {
 
               <ul className="space-y-3">
                 {exp.bullets.map((bullet, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-text-secondary leading-relaxed">
-                    <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent/50" />
+                  <li key={i} className="flex gap-3 text-[0.938rem] text-text-secondary leading-relaxed">
+                    <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent/50" />
                     {bullet}
                   </li>
                 ))}

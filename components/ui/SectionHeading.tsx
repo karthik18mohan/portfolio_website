@@ -15,13 +15,13 @@ export default function SectionHeading({ title, subtitle }: SectionHeadingProps)
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl sm:text-4xl font-bold font-display text-text-primary"
+        className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold font-display text-text-primary tracking-tight"
       >
         {title}
         <span className="inline-block w-12 h-1 bg-accent rounded-full ml-4 align-middle" />
       </motion.h2>
       {subtitle && (
-        <p className="mt-3 text-text-secondary text-base max-w-2xl">{subtitle}</p>
+        <p className="mt-3 text-text-secondary text-base sm:text-lg max-w-2xl leading-relaxed">{subtitle}</p>
       )}
     </div>
   );
