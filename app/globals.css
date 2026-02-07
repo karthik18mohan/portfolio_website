@@ -49,6 +49,26 @@ body {
   min-height: 100vh;
 }
 
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(96, 165, 250, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-15px) translateX(5px); }
+  50% { transform: translateY(-8px) translateX(-3px); }
+  75% { transform: translateY(-20px) translateX(8px); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-12px) translateX(-6px); }
+  66% { transform: translateY(-18px) translateX(4px); }
+}
+
 @layer utilities {
   .line-clamp-2 {
     display: -webkit-box;
@@ -59,5 +79,13 @@ body {
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-slower 28s ease-in-out infinite;
   }
 }
