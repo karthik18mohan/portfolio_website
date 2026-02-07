@@ -13,7 +13,7 @@ export default function ExperienceSection() {
         <motion.div
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
           className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent origin-top"
         />
@@ -23,14 +23,14 @@ export default function ExperienceSection() {
             key={index}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="relative pl-12 sm:pl-16 pb-12 last:pb-0"
           >
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.3, delay: index * 0.2 + 0.2, type: 'spring', stiffness: 300 }}
               className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-bg-primary"
             />
@@ -68,7 +68,7 @@ export default function ExperienceSection() {
                     key={i}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.3 + i * 0.05 }}
                     className="flex gap-3 text-[0.938rem] text-text-secondary leading-relaxed"
                   >

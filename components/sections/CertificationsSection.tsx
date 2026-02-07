@@ -28,7 +28,7 @@ export default function CertificationsSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
       >
         {certifications.map((cert, index) => (
@@ -58,7 +58,7 @@ export default function CertificationsSection() {
                 <motion.div
                   initial={{ rotate: -10, scale: 0 }}
                   whileInView={{ rotate: 0, scale: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.4, delay: index * 0.1 + 0.2, type: 'spring' }}
                   className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4"
                 >

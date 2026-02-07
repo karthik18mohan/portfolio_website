@@ -16,7 +16,7 @@ export default function EducationSection() {
             key={index}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
             whileHover={{ y: -3 }}
             className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all duration-300"
@@ -26,7 +26,7 @@ export default function EducationSection() {
                 <motion.div
                   initial={{ rotate: -15, scale: 0 }}
                   whileInView={{ rotate: 0, scale: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.5, delay: index * 0.15 + 0.2, type: 'spring', stiffness: 200 }}
                   className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center"
                 >
@@ -45,7 +45,7 @@ export default function EducationSection() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.4, delay: index * 0.15 + 0.3 }}
                 className="flex flex-wrap items-center gap-3 sm:flex-col sm:items-end sm:gap-2"
               >

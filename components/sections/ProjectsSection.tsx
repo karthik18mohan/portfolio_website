@@ -33,7 +33,7 @@ export default function ProjectsSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         {projects.map((project) => (

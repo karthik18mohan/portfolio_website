@@ -12,7 +12,7 @@ export default function AboutSection() {
       <motion.div
         initial={{ opacity: 0, y: 30, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="relative group"
       >
@@ -20,14 +20,14 @@ export default function AboutSection() {
           <motion.div
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
             className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-accent/40 to-transparent rounded-full origin-top"
           />
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-text-secondary text-lg leading-relaxed pl-6"
           >
@@ -36,7 +36,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-8 pl-6 flex flex-wrap gap-4"
           >

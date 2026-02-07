@@ -94,7 +94,7 @@ export default function ContactSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 gap-5"
       >
         {cards.map((card, index) => (

@@ -27,7 +27,7 @@ export default function AchievementsSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 gap-6"
       >
         {achievements.map((ach, index) => (
@@ -41,7 +41,7 @@ export default function AchievementsSection() {
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: index * 0.15 + 0.2 }}
               className="absolute top-0 right-0 w-32 h-32 bg-accent/[0.03] rounded-full -translate-y-1/2 translate-x-1/2"
             />
@@ -49,7 +49,7 @@ export default function AchievementsSection() {
               <motion.div
                 initial={{ rotate: -15, scale: 0 }}
                 whileInView={{ rotate: 0, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.5, delay: index * 0.15 + 0.1, type: 'spring', stiffness: 200 }}
                 className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5"
               >

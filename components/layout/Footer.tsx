@@ -8,7 +8,7 @@ export default function Footer() {
     <motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.6 }}
       className="border-t border-slate-200 py-8 px-4"
     >
