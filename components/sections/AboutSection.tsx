@@ -16,7 +16,7 @@ export default function AboutSection() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="relative"
       >
-        <div className="bg-bg-card border border-white/5 rounded-xl p-8 sm:p-10">
+        <div className="bg-bg-card border border-slate-200 rounded-xl p-8 sm:p-10 shadow-card">
           <div className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-accent/40 to-transparent rounded-full" />
           <p className="text-text-secondary text-lg leading-relaxed pl-6">
             {profile.about}

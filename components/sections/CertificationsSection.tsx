@@ -20,7 +20,7 @@ export default function CertificationsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             whileHover={{ y: -3 }}
-            className="bg-bg-card border border-white/5 rounded-xl overflow-hidden hover:border-accent/20 transition-colors"
+            className="bg-bg-card border border-slate-200 rounded-xl overflow-hidden shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all"
           >
             {cert.image && (
               <div className="relative w-full bg-bg-elevated">

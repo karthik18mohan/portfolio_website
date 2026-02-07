@@ -18,7 +18,7 @@ export default function EducationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-bg-card border border-white/5 rounded-xl p-6 sm:p-8"
+            className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card"
           >
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div className="flex gap-4">
@@ -30,7 +30,7 @@ export default function EducationSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-text-primary">{edu.degree}</h3>
+                  <h3 className="text-lg font-semibold font-display text-text-primary">{edu.degree}</h3>
                   <p className="text-accent text-sm font-medium">{edu.field}</p>
                   <p className="mt-1 text-sm text-text-secondary">{edu.institution}</p>
                 </div>

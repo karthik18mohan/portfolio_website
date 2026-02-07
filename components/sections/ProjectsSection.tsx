@@ -33,9 +33,9 @@ export default function ProjectsSection() {
           >
             <Link href={`/projects/${project.slug}`} className="block group">
               <motion.div
-                whileHover={{ y: -4, boxShadow: '0 8px 30px rgba(20, 184, 166, 0.12)' }}
+                whileHover={{ y: -4 }}
                 transition={{ duration: 0.25 }}
-                className="bg-bg-card border border-white/5 rounded-xl overflow-hidden hover:border-accent/30 transition-colors"
+                className="bg-bg-card border border-slate-200 rounded-xl overflow-hidden shadow-card hover:shadow-card-hover hover:border-accent/30 transition-all"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -45,11 +45,11 @@ export default function ProjectsSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg-card/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
+                  <h3 className="text-lg font-semibold font-display text-text-primary group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
 

@@ -22,11 +22,11 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-accent text-bg-primary hover:bg-accent-light shadow-lg shadow-accent/20 hover:shadow-accent/30',
+      'bg-accent text-white hover:bg-accent-dark shadow-lg shadow-accent/20 hover:shadow-accent/30',
     outline:
-      'border border-accent/40 text-accent hover:bg-accent/10 hover:border-accent',
+      'border border-slate-300 text-text-primary hover:bg-accent/5 hover:border-accent hover:text-accent',
     ghost:
-      'text-text-secondary hover:text-text-primary hover:bg-white/5',
+      'text-text-secondary hover:text-text-primary hover:bg-slate-100',
   };
 
   return (

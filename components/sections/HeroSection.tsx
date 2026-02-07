@@ -29,12 +29,12 @@ export default function HeroSection() {
           src={profile.heroBackground}
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-[0.07]"
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-bg-primary via-bg-primary/95 to-bg-secondary/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-bg-primary/95 to-bg-elevated/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(13,148,136,0.06),_transparent_60%)]" />
       </div>
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -49,7 +49,7 @@ export default function HeroSection() {
               {profile.tagline}
             </motion.p>
 
-            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight">
+            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display text-text-primary leading-tight">
               {profile.name}
             </motion.h1>
 
@@ -106,8 +106,8 @@ export default function HeroSection() {
 
           <motion.div variants={item} className="flex-shrink-0">
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64">
-              <div className="absolute -inset-1 bg-gradient-to-br from-accent/40 to-accent/10 rounded-full blur-md" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/30">
+              <div className="absolute -inset-1 bg-gradient-to-br from-accent/30 to-accent/5 rounded-full blur-md" />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/20 shadow-elevated">
                 <Image
                   src={profile.profileImage}
                   alt={profile.name}

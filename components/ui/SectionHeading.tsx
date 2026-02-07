@@ -15,7 +15,7 @@ export default function SectionHeading({ title, subtitle }: SectionHeadingProps)
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl sm:text-4xl font-bold text-text-primary"
+        className="text-3xl sm:text-4xl font-bold font-display text-text-primary"
       >
         {title}
         <span className="inline-block w-12 h-1 bg-accent rounded-full ml-4 align-middle" />

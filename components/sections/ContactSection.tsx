@@ -86,7 +86,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             whileHover={{ y: -3 }}
-            className="bg-bg-card border border-white/5 rounded-xl p-6 hover:border-accent/20 transition-colors"
+            className="bg-bg-card border border-slate-200 rounded-xl p-6 shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-4">
@@ -114,8 +114,8 @@ export default function ContactSection() {
                   onClick={card.action}
                   className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
                     copied
-                      ? 'bg-accent/20 text-accent'
-                      : 'bg-white/5 text-text-secondary hover:bg-white/10 hover:text-text-primary'
+                      ? 'bg-accent/15 text-accent'
+                      : 'bg-slate-100 text-text-secondary hover:bg-slate-200 hover:text-text-primary'
                   }`}
                 >
                   {card.actionLabel}

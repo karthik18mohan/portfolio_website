@@ -6,8 +6,8 @@ interface BadgeProps {
 export default function Badge({ children, variant = 'default' }: BadgeProps) {
   const styles =
     variant === 'accent'
-      ? 'bg-accent/15 text-accent-light border-accent/20'
-      : 'bg-white/5 text-text-secondary border-white/10';
+      ? 'bg-accent/8 text-accent-dark border-accent/15'
+      : 'bg-slate-100 text-text-secondary border-slate-200';
 
   return (
     <span

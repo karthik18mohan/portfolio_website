@@ -23,10 +23,10 @@ export default function ExperienceSection() {
           >
             <div className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-bg-primary" />
 
-            <div className="bg-bg-card border border-white/5 rounded-xl p-6 sm:p-8">
+            <div className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-text-primary">{exp.role}</h3>
+                  <h3 className="text-lg font-semibold font-display text-text-primary">{exp.role}</h3>
                   <p className="text-accent text-sm font-medium">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-text-muted">

@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0a0f1a;
-  color: #f1f5f9;
+  background-color: #f8fafc;
+  color: #1e293b;
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
 }
@@ -20,27 +20,27 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0f1a;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1f2b3d;
+  background: #cbd5e1;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a3a50;
+  background: #94a3b8;
 }
 
 ::selection {
-  background-color: rgba(20, 184, 166, 0.3);
-  color: #f1f5f9;
+  background-color: rgba(13, 148, 136, 0.15);
+  color: #0f172a;
 }
 
 .snap-container {
   height: 100vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
