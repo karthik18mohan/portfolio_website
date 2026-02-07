@@ -646,7 +646,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"1":{"thumbnail":"/assets/projects/1/
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"Karthik Mohan","title":"Data Scientist / AI Engineer","tagline":"Applied ML • Time-Series Analytics • Automotive Reliability","location":"Bangalore, India","email":"karthikmohan133@gmail.com","about":"I am an applied Data Scientist and AI Engineer with experience building, validating, and deploying machine learning and time-series analytics for automotive reliability, virtual sensing, and validation efficiency. I enjoy translating complex telemetry and engineering theory into production-ready tools with measurable impact.","links":{"github":"https://github.com/your-username","linkedin":"https://linkedin.com/in/your-handle"},"profileImage":"/assets/profile/profile.jpg","heroBackground":"/assets/backgrounds/hero.jpg","resumeUrl":"/resume.pdf"}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"Karthik Mohan","title":"Data Scientist / AI Engineer","tagline":"Applied ML • Time-Series Analytics • Automotive Reliability","location":"Bangalore, India","email":"karthikmohan133@gmail.com","about":"I am an applied Data Scientist and AI Engineer with experience building, validating, and deploying machine learning and time-series analytics for automotive reliability, virtual sensing, and validation efficiency. I enjoy translating complex telemetry and engineering theory into production-ready tools with measurable impact.","links":{"github":"https://github.com/your-username","linkedin":"https://linkedin.com/in/your-handle"},"profileImage":"/assets/profile/profile.jpeg","heroBackground":"/assets/backgrounds/hero.jpg","resumeUrl":"/resume.pdf"}');
 
 /***/ }),
 
@@ -657,7 +657,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"Karthik Mohan","title":"Data 
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"Karthik Mohan","title":"Data Scientist / AI Engineer","tagline":"Applied ML • Time-Series Analytics • Automotive Reliability","location":"Bangalore, India","email":"karthikmohan133@gmail.com","about":"I am an applied Data Scientist and AI Engineer with experience building, validating, and deploying machine learning and time-series analytics for automotive reliability, virtual sensing, and validation efficiency. I enjoy translating complex telemetry and engineering theory into production-ready tools with measurable impact.","links":{"github":"https://github.com/your-username","linkedin":"https://linkedin.com/in/your-handle"},"profileImage":"/assets/profile/profile.jpg","heroBackground":"/assets/backgrounds/hero.jpg","resumeUrl":"/resume.pdf"}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"Karthik Mohan","title":"Data Scientist / AI Engineer","tagline":"Applied ML • Time-Series Analytics • Automotive Reliability","location":"Bangalore, India","email":"karthikmohan133@gmail.com","about":"I am an applied Data Scientist and AI Engineer with experience building, validating, and deploying machine learning and time-series analytics for automotive reliability, virtual sensing, and validation efficiency. I enjoy translating complex telemetry and engineering theory into production-ready tools with measurable impact.","links":{"github":"https://github.com/your-username","linkedin":"https://linkedin.com/in/your-handle"},"profileImage":"/assets/profile/profile.jpeg","heroBackground":"/assets/backgrounds/hero.jpg","resumeUrl":"/resume.pdf"}');
 
 /***/ }),
 
