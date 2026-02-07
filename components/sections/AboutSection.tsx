@@ -10,18 +10,36 @@ export default function AboutSection() {
     <SectionWrapper id="about">
       <SectionHeading title="About Me" />
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="relative"
+        transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="relative group"
       >
-        <div className="bg-bg-card border border-slate-200 rounded-xl p-8 sm:p-10 shadow-card">
-          <div className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-accent/40 to-transparent rounded-full" />
-          <p className="text-text-secondary text-lg leading-relaxed pl-6">
+        <div className="bg-bg-card border border-slate-200 rounded-xl p-8 sm:p-10 shadow-card hover:shadow-card-hover transition-shadow duration-500">
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+            className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-accent/40 to-transparent rounded-full origin-top"
+          />
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-text-secondary text-lg leading-relaxed pl-6"
+          >
             {profile.about}
-          </p>
-          <div className="mt-8 pl-6 flex flex-wrap gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-8 pl-6 flex flex-wrap gap-4"
+          >
             <div className="flex items-center gap-2 text-sm text-text-muted">
               <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -35,7 +53,7 @@ export default function AboutSection() {
               </svg>
               {profile.email}
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </SectionWrapper>

@@ -10,20 +10,36 @@ export default function ExperienceSection() {
     <SectionWrapper id="experience">
       <SectionHeading title="Experience" />
       <div className="relative">
-        <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent" />
+        <motion.div
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent origin-top"
+        />
 
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="relative pl-12 sm:pl-16 pb-12 last:pb-0"
           >
-            <div className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-bg-primary" />
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.2 + 0.2, type: 'spring', stiffness: 300 }}
+              className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-bg-primary"
+            />
 
-            <div className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card">
+            <motion.div
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.25 }}
+              className="bg-bg-card border border-slate-200 rounded-xl p-6 sm:p-8 shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all duration-300"
+            >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary tracking-tight">{exp.role}</h3>
@@ -48,13 +64,20 @@ export default function ExperienceSection() {
 
               <ul className="space-y-3">
                 {exp.bullets.map((bullet, i) => (
-                  <li key={i} className="flex gap-3 text-[0.938rem] text-text-secondary leading-relaxed">
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + 0.3 + i * 0.05 }}
+                    className="flex gap-3 text-[0.938rem] text-text-secondary leading-relaxed"
+                  >
                     <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent/50" />
                     {bullet}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>

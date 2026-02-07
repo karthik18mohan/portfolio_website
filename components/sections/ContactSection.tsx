@@ -6,6 +6,19 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { profile } from '@/lib/data';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 25, scale: 0.97 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+};
+
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
 
@@ -77,22 +90,30 @@ export default function ContactSection() {
         subtitle="Interested in collaborating or have a question? Reach out through any of the channels below."
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+      >
         {cards.map((card, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            whileHover={{ y: -3 }}
-            className="bg-bg-card border border-slate-200 rounded-xl p-6 shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all"
+            variants={cardVariants}
+            whileHover={{ y: -4, scale: 1.01 }}
+            transition={{ duration: 0.25 }}
+            className="bg-bg-card border border-slate-200 rounded-xl p-6 shadow-card hover:shadow-card-hover hover:border-accent/20 transition-all duration-300"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent">
+                <motion.div
+                  whileHover={{ rotate: 5, scale: 1.1 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent"
+                >
                   {card.icon}
-                </div>
+                </motion.div>
                 <div>
                   <p className="text-xs text-text-muted uppercase tracking-wider">{card.label}</p>
                   {card.href ? (
@@ -100,7 +121,7 @@ export default function ContactSection() {
                       href={card.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-text-primary hover:text-accent transition-colors mt-1 inline-block"
+                      className="text-sm text-text-primary hover:text-accent transition-colors duration-200 mt-1 inline-block"
                     >
                       {card.value}
                     </a>
@@ -110,21 +131,23 @@ export default function ContactSection() {
                 </div>
               </div>
               {card.action && (
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={card.action}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 ${
                     copied
                       ? 'bg-accent/15 text-accent'
                       : 'bg-slate-100 text-text-secondary hover:bg-slate-200 hover:text-text-primary'
                   }`}
                 >
                   {card.actionLabel}
-                </button>
+                </motion.button>
               )}
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </SectionWrapper>
   );
 }

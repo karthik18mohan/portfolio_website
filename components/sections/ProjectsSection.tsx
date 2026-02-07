@@ -8,9 +8,17 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Badge from '@/components/ui/Badge';
 import { projects } from '@/lib/data';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 40, scale: 0.97 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 };
 
 export default function ProjectsSection() {
@@ -21,35 +29,37 @@ export default function ProjectsSection() {
         subtitle="A selection of projects spanning full-stack development, machine learning, and signal processing."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {projects.map((project) => (
           <motion.div
             key={project.id}
             variants={cardVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Link href={`/projects/${project.id}`} className="block group">
               <motion.div
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.25 }}
-                className="bg-bg-card border border-slate-200 rounded-xl overflow-hidden shadow-card hover:shadow-card-hover hover:border-accent/30 transition-all"
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="bg-bg-card border border-slate-200 rounded-xl overflow-hidden shadow-card hover:shadow-card-hover hover:border-accent/30 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={project.thumbnail || '/assets/projects/placeholder.jpg'}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary group-hover:text-accent transition-colors tracking-tight">
+                  <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary group-hover:text-accent transition-colors duration-300 tracking-tight">
                     {project.title}
                   </h3>
 
@@ -66,7 +76,7 @@ export default function ProjectsSection() {
                   <div className="mt-4 flex items-center text-sm text-accent font-medium">
                     View Details
                     <svg
-                      className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                      className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -79,7 +89,7 @@ export default function ProjectsSection() {
             </Link>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </SectionWrapper>
   );
 }
