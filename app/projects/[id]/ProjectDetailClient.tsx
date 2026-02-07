@@ -13,6 +13,7 @@ interface Props {
 
 export default function ProjectDetailClient({ project }: Props) {
   const [activeScreenshot, setActiveScreenshot] = useState(0);
+  const screenshots = project.screenshots || [];
 
   return (
     <div className="min-h-screen bg-bg-primary py-12 px-4 sm:px-6 lg:px-8">
@@ -92,7 +93,7 @@ export default function ProjectDetailClient({ project }: Props) {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={project.screenshots[activeScreenshot]}
+                    src={screenshots[activeScreenshot]}
                     alt={`${project.title} screenshot ${activeScreenshot + 1}`}
                     fill
                     className="object-cover"
@@ -102,12 +103,12 @@ export default function ProjectDetailClient({ project }: Props) {
               </AnimatePresence>
             </div>
 
-            {project.screenshots.length > 1 && (
+            {screenshots.length > 1 && (
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3">
                 <button
                   onClick={() =>
                     setActiveScreenshot((prev) =>
-                      prev === 0 ? project.screenshots.length - 1 : prev - 1
+                      prev === 0 ? screenshots.length - 1 : prev - 1
                     )
                   }
                   className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 flex items-center justify-center text-text-primary hover:bg-white hover:border-accent/30 transition-all shadow-sm"
@@ -119,7 +120,7 @@ export default function ProjectDetailClient({ project }: Props) {
                 </button>
 
                 <div className="flex gap-2">
-                  {project.screenshots.map((_, i) => (
+                  {screenshots.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => setActiveScreenshot(i)}
@@ -136,7 +137,7 @@ export default function ProjectDetailClient({ project }: Props) {
                 <button
                   onClick={() =>
                     setActiveScreenshot((prev) =>
-                      prev === project.screenshots.length - 1 ? 0 : prev + 1
+                      prev === screenshots.length - 1 ? 0 : prev + 1
                     )
                   }
                   className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 flex items-center justify-center text-text-primary hover:bg-white hover:border-accent/30 transition-all shadow-sm"

@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { projects, getProjectBySlug } from '@/lib/data';
+import { projects, getProjectById } from '@/lib/data';
 import ProjectDetailClient from './ProjectDetailClient';
 
 interface Props {
-  params: { slug: string };
+  params: { id: string };
 }
 
 export function generateStaticParams() {
   return projects.map((project) => ({
-    slug: project.slug,
+    id: String(project.id),
   }));
 }
 
 export function generateMetadata({ params }: Props): Metadata {
-  const project = getProjectBySlug(params.slug);
+  const project = getProjectById(Number(params.id));
   if (!project) {
     return { title: 'Project Not Found' };
   }
@@ -29,7 +29,7 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 export default function ProjectPage({ params }: Props) {
-  const project = getProjectBySlug(params.slug);
+  const project = getProjectById(Number(params.id));
 
   if (!project) {
     notFound();

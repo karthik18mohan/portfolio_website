@@ -6,16 +6,28 @@ import projectsData from '@/content/projects.json';
 import certificationsData from '@/content/certifications.json';
 import achievementsData from '@/content/achievements.json';
 import educationData from '@/content/education.json';
+import imagesManifest from '@/content/images-manifest.json';
 
 export const profile = profileData as Profile;
 export const experiences = experienceData as Experience[];
-export const projects = projectsData as Project[];
 export const certifications = certificationsData as Certification[];
 export const achievements = achievementsData as Achievement[];
 export const education = educationData as Education[];
 
-export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+const projectsWithImages: Project[] = (projectsData as Project[]).map(project => {
+  const imageData = imagesManifest[String(project.id) as keyof typeof imagesManifest];
+
+  return {
+    ...project,
+    thumbnail: imageData?.thumbnail || '/assets/projects/placeholder.jpg',
+    screenshots: imageData?.screenshots || [],
+  };
+});
+
+export const projects = projectsWithImages;
+
+export function getProjectById(id: number): Project | undefined {
+  return projects.find((p) => p.id === id);
 }
 
 export const navItems: NavItem[] = [

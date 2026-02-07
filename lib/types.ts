@@ -24,16 +24,16 @@ export interface Experience {
 }
 
 export interface Project {
-  slug: string;
+  id: number;
   title: string;
   shortInfo: string;
   description: string;
   tools: string[];
-  thumbnail: string;
-  screenshots: string[];
   githubUrl: string;
   liveUrl: string | null;
   tags: string[];
+  thumbnail?: string;
+  screenshots?: string[];
 }
 
 export interface Certification {

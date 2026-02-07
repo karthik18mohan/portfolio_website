@@ -24,14 +24,14 @@ export default function ProjectsSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <motion.div
-            key={project.slug}
+            key={project.id}
             variants={cardVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Link href={`/projects/${project.slug}`} className="block group">
+            <Link href={`/projects/${project.id}`} className="block group">
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.25 }}
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={project.thumbnail}
+                    src={project.thumbnail || '/assets/projects/placeholder.jpg'}
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

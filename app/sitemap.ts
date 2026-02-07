@@ -5,7 +5,7 @@ const BASE_URL = 'https://karthikmohan.dev';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectRoutes = projects.map((project) => ({
-    url: `${BASE_URL}/projects/${project.slug}`,
+    url: `${BASE_URL}/projects/${project.id}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
