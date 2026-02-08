@@ -1,0 +1,95 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import SectionWrapper from '@/components/ui/SectionWrapper';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Badge from '@/components/ui/Badge';
+import { projects } from '@/lib/data';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.97 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+};
+
+export default function ProjectsSection() {
+  return (
+    <SectionWrapper id="projects">
+      <SectionHeading
+        title="Projects"
+        subtitle="A selection of projects spanning full-stack development, machine learning, and signal processing."
+      />
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.1 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            variants={cardVariants}
+          >
+            <Link href={`/projects/${project.id}`} className="block group">
+              <motion.div
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="bg-bg-card border border-slate-200 rounded-xl overflow-hidden shadow-card hover:shadow-card-hover hover:border-accent/30 transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.thumbnail || '/assets/projects/placeholder.jpg'}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-lg sm:text-xl font-semibold font-display text-text-primary group-hover:text-accent transition-colors duration-300 tracking-tight">
+                    {project.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-text-secondary line-clamp-2 leading-relaxed">
+                    {project.shortInfo}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="accent">{tag}</Badge>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex items-center text-sm text-accent font-medium">
+                    View Details
+                    <svg
+                      className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </motion.div>
+    </SectionWrapper>
+  );
+}

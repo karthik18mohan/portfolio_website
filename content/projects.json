@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Zenlit – Location-Based Social Networking Platform",
+    "shortInfo": "A location-based social networking application featuring real-time geo-feeds, proximity-based content discovery, and secure user authentication for seamless social interactions.",
+    "description": "Zenlit is a full-stack location-based social networking platform that enables users to discover and connect with people and events in their geographic proximity. The application features real-time geo-feeds powered by Supabase's PostGIS capabilities, proximity-based content ranking, and a secure authentication system. Built with Next.js and React for the web interface and Expo for mobile, the platform delivers a seamless cross-platform experience. Key features include live location sharing, event creation with geo-fencing, and a privacy-first approach to location data management.",
+    "tools": ["Next.js", "React", "TailwindCSS", "Supabase", "Expo"],
+    "githubUrl": "https://github.com/your-username/zenlit",
+    "liveUrl": "https://zenlit-demo.vercel.app",
+    "tags": ["Full-Stack", "Social", "Geo-Location", "Real-Time"]
+  },
+  {
+    "id": 2,
+    "title": "Brake Pad Wear Prediction (ML)",
+    "shortInfo": "An ML regression model trained on telemetry and test-bench data, validated on real vehicles for proactive brake maintenance scheduling and downtime reduction.",
+    "description": "This project implements a machine learning pipeline for predicting brake pad wear in automotive vehicles using telemetry data collected from test benches and real-world driving scenarios. The system employs advanced feature engineering techniques to extract meaningful signals from raw sensor data including temperature profiles, pressure distributions, and driving patterns. A gradient-boosted regression model was trained and validated against physical measurements from real vehicles, achieving approximately 90% prediction accuracy. The model enables proactive maintenance scheduling, reducing unplanned downtime by 25% compared to traditional threshold-based approaches.",
+    "tools": ["Python", "Scikit-learn", "Feature Engineering", "Pandas", "NumPy"],
+    "githubUrl": "https://github.com/your-username/brake-pad-wear-ml",
+    "liveUrl": null,
+    "tags": ["Machine Learning", "Automotive", "Predictive Maintenance"]
+  },
+  {
+    "id": 3,
+    "title": "Virtual Sensor – Maneuver Detection",
+    "shortInfo": "A time-series detection algorithm packaged as a standalone executable tool for automated maneuver identification at scale across vehicle validation departments.",
+    "description": "This project delivers a virtual sensor system for automated detection and classification of vehicle maneuvers from time-series telemetry data. The core algorithm uses iterative detection logic combining signal processing techniques with domain-specific heuristics to identify steering maneuvers, braking events, and complex driving patterns. The solution was productized as a standalone Windows executable with a user-friendly interface, enabling deployment across multiple validation departments without requiring Python installations. The system achieves greater than 95% detection accuracy and has significantly reduced the manual effort previously required for maneuver identification in vehicle validation workflows.",
+    "tools": ["Python", "Time-Series Analysis", "Signal Processing", "PyInstaller"],
+    "githubUrl": "https://github.com/your-username/virtual-sensor-maneuver",
+    "liveUrl": null,
+    "tags": ["Time-Series", "Signal Processing", "Automation"]
+  },
+  {
+    "id": 4,
+    "title": "Rainflow Fatigue Analytics (4-Point)",
+    "shortInfo": "A four-point Rainflow counting pipeline that translates real-world vehicle telemetry load data into deployable fatigue damage metrics for durability monitoring.",
+    "description": "This project implements a comprehensive four-point Rainflow counting algorithm for fatigue analysis of automotive components. The pipeline ingests real-world vehicle load data from multiple sensor channels and processes it through signal conditioning, cycle extraction, and damage accumulation stages. The Rainflow counting method identifies stress-strain hysteresis loops from variable amplitude loading histories, converting complex load spectra into equivalent constant-amplitude cycles. The resulting damage metrics are formatted for direct integration with supplier ECU systems, enabling large-scale customer vehicle durability monitoring. The pipeline supports batch processing of multiple test drives and generates standardized reports for engineering review.",
+    "tools": ["Python", "Signal Processing", "Fatigue Modeling", "NumPy", "Matplotlib"],
+    "githubUrl": "https://github.com/your-username/rainflow-fatigue",
+    "liveUrl": null,
+    "tags": ["Signal Processing", "Fatigue Analysis", "Automotive", "Data Pipeline"]
+  }
+]
